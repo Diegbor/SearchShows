@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import CardSerie from './CardSerie'
 
 const Series = ({ data }) => {
@@ -9,9 +10,11 @@ const Series = ({ data }) => {
           {data.map(item => (
             <li
               className='col-12 col-md-6 col-lg-4'
-              key={item.id}
+              key={item.show.id}
             >
-              <CardSerie {...item} />
+              <Link to={`/home/${item.show.id}`}>
+                <CardSerie {...item} />
+              </Link>
             </li>
           ))}
         </ul>

@@ -5,7 +5,6 @@ const Loading = () => {
         <span className='visually-hidden'>Loading...</span>
       </div>
     </div>
-
   )
 }
 
